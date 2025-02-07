@@ -5,11 +5,16 @@ const mongoConnect = require("./db");
 const cors = require('cors');
 
 // CORS middleware (allow specific frontend origin)
-app.use(cors({
-  origin: "https://myfoodfrontend.onrender.com/", // React app ka origin
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"]
-}));
+
+app.use(
+  cors({
+    origin: "https://myfoodfrontend.onrender.com", // REMOVE the trailing slash
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
+
 
 app.use(express.json());  // JSON body parse karne ke liye
 
