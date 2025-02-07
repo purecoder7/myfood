@@ -6,7 +6,7 @@ function Signup() {
     const [loginInfo, setloginInfo] = useState({ name: "", email: "", password: "", address: "" })
     const handleSubmit = async  (event) => {
         event.preventDefault()
-        let response = await fetch("http://localhost:4000/req/createuser", {
+        let response = await fetch("https://myfoodbackend.onrender.com/req/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json',
