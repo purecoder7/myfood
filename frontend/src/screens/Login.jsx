@@ -7,7 +7,7 @@ function Login() {
     const [loginInfo, setloginInfo] = useState({ email: "", password: "" })
     const handleSubmit = async (event) => {
         event.preventDefault()
-        let response = await fetch("http://localhost:4000/req/login", {
+        let response = await fetch("https://myfoodbackend.onrender.com/req/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
