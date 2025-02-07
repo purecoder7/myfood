@@ -30,7 +30,7 @@ function Cart() {
 
     let checkout = async () => {
         let orderData = cartState;
-        let response = await fetch("http://localhost:4000/req/fetchorder", {
+        let response = await fetch("https://myfoodbackend.onrender.com/req/fetchorder", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
