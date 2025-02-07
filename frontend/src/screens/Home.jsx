@@ -13,7 +13,7 @@ function Home() {
   const loadData = useCallback(async () => {
     try {
       setLoading(true);
-      let response = await fetch("http://localhost:4000/req/fetchdata", {
+      let response = await fetch("https://myfoodbackend.onrender.com/req/fetchdata", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
