@@ -6,7 +6,7 @@ function MyOrders() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await fetch("http://localhost:4000/req/myorder", {
+        let response = await fetch("https://myfoodbackend.onrender.com/req/myorder", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
