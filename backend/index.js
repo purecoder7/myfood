@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // CORS middleware (allow specific frontend origin)
 app.use(cors({
-  origin: "http://localhost:5173", // React app ka origin
+  origin: "https://myfoodfrontend.onrender.com/", // React app ka origin
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"]
 }));
